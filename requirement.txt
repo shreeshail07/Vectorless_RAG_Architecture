@@ -1,0 +1,8 @@
+streamlit
+python-dotenv
+openai
+pandas
+rank-bm25
+pypdf
+python-docx
+reportlab
