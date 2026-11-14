@@ -223,9 +223,151 @@ def load_pdf(path: Path) -> list[DocumentDict]:
         "doc_type": "pdf_page",
         "metadata": {
           "page": page_num,
-          "claim_ids": claim_ids[0].upper() if claim_ids else "",
           "claim_ids": [c.upper() for c in claim_ids],
          },
       }
     )
   return documents
+
+def load_docx(path: Path) -> list[DocumentDict]:
+  """
+  Load a docx file and group its paragraph into searchable sections.
+  
+  Short paragraph are  treated as section breaker, helping keep related
+  policy information together for retrieval.
+  
+  Example:
+      policy_document.docx
+      
+      section 1 > searchable document
+      section 2 > searchable document
+      section 3 > searchable document
+      
+  """
+
+
+  # Extract no-empty paragraphs from the DOCX file.
+
+  doc = Document(str(path))
+
+  paragraphs =[p.text.strip() for p in doc.paragraphs if p.text.strip()]
+
+  # Build small sections instead of treating the entire document as one chunk.
+
+  documents: list[DocumentDict] = []
+  buffer: list[str] = []
+  section =0
+
+  for para in paragraphs:
+    if len(para) < 80 and buffer:
+      # Treat a short paragraph as a likely section heading/ break
+      section += 1 
+      documents.append(
+        {
+          "text": "\n".join(buffer),
+          "source":path.name,
+          "doc_type": "docx_section",
+          "metadata": {"section": section},
+        }
+      )
+      buffer =[para]
+    else:
+      buffer.append(para)
+  # Add the final section after the loop.
+  if buffer:
+    section +=1
+    documents.append(
+      {
+        "text":"\n".join(buffer),
+        "source": path.name,
+        "doc_type": "docx_section",
+        "metadata": {"section": section},
+
+      }
+    )
+  return documents
+
+
+
+def load_all_documents(data_dir: Path |None = None) -> list[DocumentDict]:
+  """
+  Load all supported files from the data directory.
+  
+  The function selects the correct loader_based on each fil's extension
+  and combines all loaded documents into one list.
+  
+  Supported formats:
+    CSV, TXT, PDF, DOCX
+  """
+
+  data_dir = data_dir or default_data_dir()
+
+  # Make sure the data directory exists before loading files.
+
+  if not data_dir.exists():
+    raise FileNotFoundError(f"Data directory not found: {data_dir}")
+
+  documents: list[DocumentDict] =[]
+
+  # Map each file type to its corresponding loader function.
+
+  loaders = {
+    ".csv": load_csv_claims,
+    ".txt": load_text,
+    ".pdf": load_pdf,
+    ".docx": load_docx,
+  }
+
+  for path in sorted(data_dir.iterdir()):
+    # Ignore directories and process only files.
+    if not path.is_file():
+      continue
+
+    # Select the appropriate loader based on the file extension.
+    loader = loaders.get(path.suffix.lower())
+
+    if loader is None:
+      logger.warning("Skipping unsupported file: %s", path.name)
+      continue
+    try:
+      loaded = loader(path)
+      documents.extend(loaded)
+
+      logger.info(
+        "Loaded %s documents from %s",
+        len(loaded),
+        path.name,
+      )
+
+    except Exception as exc:
+      # Stop the application if a supported file cannot be loaded.
+      logger.error("Failed to load %s: %s", path.name, exc)
+      raise
+
+  # An empty document collection means the application has nothing to search.
+  if not documents:
+    raise ValueError(f"No documents loaded from {data_dir}")
+  return documents
+
+@lru_cache(maxsize=1)
+def get_cached_documents(data_dir_str: str | None = None) -> tuple[DocumentDict, ...]:
+  """
+  Load and cache all documents so they do not need to be read repeatedly.
+  The cache stores the documents for the lifetime of the application process.
+  Example:
+      First call > Load files from disk.
+      Next calls > Return the cached documents.
+  """
+  # Convert the directory string back to into  a Path Object.
+  data_dir = Path(data_dir_str) if data_dir_str else default_data_dir()
+
+  # Load the documents  once and store the in an immutable tuple.
+  return tuple(load_all_documents(data_dir))
+
+
+  
+
+
+
+
+
