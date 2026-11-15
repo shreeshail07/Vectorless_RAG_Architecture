@@ -1,0 +1,49 @@
+SPECIAL INVESTIGATION UNIT (SIU) GUIDELINES
+Synthetic Training Document — Aspire Claims Academy
+====================================================
+
+1. PURPOSE
+These guidelines help claim handlers identify potential fraud indicators and
+determine when a claim should be referred to the Special Investigation Unit (SIU).
+
+2. COMMON FRAUD INDICATORS
+- Staged accident: Collision appears intentionally caused or coordinated.
+- Inconsistent statements: Insured account differs across interviews or from witnesses.
+- Suspicious loss timing: Loss occurs shortly after policy inception or coverage change.
+- Prior claims: Repeated similar losses across short time periods.
+- Excessive damages: Claimed damage exceeds what the described event would cause.
+- Late reporting: Unexplained delay between loss date and claim notice.
+- Witness anomalies: No independent witnesses, or witness contradicts physical evidence.
+- Damage pattern inconsistency: Physical damage does not match reported impact angle.
+
+3. REFERRAL CRITERIA
+Refer to SIU when one or more of the following apply:
+A. Clear evidence of staged accident indicators.
+B. Material inconsistent statements between insured and witness.
+C. Suspicious loss timing combined with other red flags.
+D. Prior claims history suggesting a pattern of abuse.
+E. Excessive damages unsupported by photos or repair estimates.
+F. Handler or adjuster has a reasonable suspicion of fraud.
+
+4. DOCUMENTATION REQUIREMENTS
+- Record all statements verbatim where possible.
+- Preserve photos, police reports, and repair estimates.
+- Note the specific fraud indicators observed.
+- Do not accuse the claimant; document facts and referral reason only.
+
+5. HANDLER ACTIONS BEFORE REFERRAL
+1. Complete initial claim intake.
+2. Compare insured statement to witness statement.
+3. Review prior claims on the same policy or claimant.
+4. Check loss timing relative to policy effective date.
+5. Submit SIU referral with supporting evidence.
+
+6. KEY TERMS FOR INVESTIGATORS
+staged accident | inconsistent statements | suspicious loss timing |
+prior claims | excessive damages | fraud indicators | referral criteria |
+rear-end collision | witness statement | policy inception
+
+7. EXAMPLE REFERRAL LANGUAGE
+"Claim referred to SIU due to inconsistent statements between the insured and
+an independent witness, combined with damage inconsistent with a low-speed
+rear-end collision."

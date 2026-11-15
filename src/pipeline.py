@@ -21,7 +21,7 @@ from src.utils import RateLimiter, extract_claim_ids, logger
 load_dotenv()
 
 @dataclass
-class PipelineResponse():
+class PipelineResponse:
   answer: str
   retrieval: RetrievalResult
   citations: list[dict[str, Any]] = field(default_factory=list)
@@ -140,7 +140,7 @@ def run_pipeline(
       sidebar_filters=sidebar_filters,
     )
 
-  except Exception as exc:
+  except Exception as exc:  # noqa: BLE001 - retrieval adapters can raise diverse runtime errors
     # Return a structured error if retrieval fails.
     empty = RetrievalResult(
       documents=[],
@@ -225,14 +225,14 @@ def run_pipeline(
       llm_latency_seconds=llm_latency,
       resolved_query=resolved,
       error=str(exc),
-      total_latency_seconds=time.perf_counter()=total_start
+      total_latency_seconds=time.perf_counter() - total_start,
   )
   
   total_latency = time.perf_counter() - total_start
 
   # Log retrieval and LLM performance separately.
   logger.info(
-    "Pipeline complete | retrieval=%.3fs llm=%.3fs total=%.3fs"
+    "Pipeline complete | retrieval=%.3fs llm=%.3fs total=%.3fs",
     retrieval.latency_seconds,
     llm_latency,
     total_latency,

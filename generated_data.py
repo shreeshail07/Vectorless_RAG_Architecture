@@ -9,7 +9,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
 
-DATA_DIR = Path(__file__).parent/"data"
+DATA_DIR = Path(__file__).parent / "data"
 random.seed(42)
 
 

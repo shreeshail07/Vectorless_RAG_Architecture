@@ -1,0 +1,228 @@
+SYNTHETIC CLAIM INVESTIGATION NOTES
+Confidential - Training Data Only
+============================================================
+
+Claim CLM-1001: Insured David Davis reported a Vandalism loss on 2024-01-04 in Texas. Vehicle type: SUV. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $63,239. Claim status: Open.
+----------------------------------------
+
+Investigation note for CLM-1002 (Policy POL-2003). Loss type: Vandalism. Claimant Kevin Patel provided a statement describing a rear-end collision on 2024-02-07. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1003. Location: California. The insured claims a Theft event damaged their Motorcycle. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Open. Amount: $6,106.
+----------------------------------------
+
+Claim CLM-1004 review summary. Policy POL-2005. Claimant: Anita Martinez. The insured reported theft of personal items from the vehicle on 2024-04-13. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1005. Loss type Comprehensive in Ohio. Insured Aisha Taylor described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1006: Collision involving Pickup Truck owned by John Harris. Date of loss: 2024-06-19. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Denied.
+----------------------------------------
+
+Comprehensive claim CLM-1007. Hail damage reported in North Carolina on 2024-07-22. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Robert Perez. Estimated payout $11,310. Status: Denied.
+----------------------------------------
+
+Follow-up note on CLM-1008 / POL-2009. Adjuster interviewed claimant Anita Brown. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1009: Insured Michael Patel reported a Collision loss on 2024-09-01 in Pennsylvania. Vehicle type: SUV. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $19,989. Claim status: Open.
+----------------------------------------
+
+Investigation note for CLM-1010 (Policy POL-2011). Loss type: Collision. Claimant John Williams provided a statement describing a rear-end collision on 2024-10-04. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1011. Location: California. The insured claims a Theft event damaged their Motorcycle. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Open. Amount: $17,018.
+----------------------------------------
+
+Claim CLM-1012 review summary. Policy POL-2013. Claimant: Carlos Jackson. The insured reported theft of personal items from the vehicle on 2024-12-10. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1013. Loss type Theft in New York. Insured Maria Davis described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1014: Collision involving Van owned by Aisha Martin. Date of loss: 2024-02-16. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Denied.
+----------------------------------------
+
+Comprehensive claim CLM-1015. Hail damage reported in Florida on 2024-03-19. Roof and hood dents consistent with weather event. No SIU concerns. Claimant David Perez. Estimated payout $23,103. Status: Denied.
+----------------------------------------
+
+Follow-up note on CLM-1016 / POL-2017. Adjuster interviewed claimant Sofia Thomas. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1017: Insured Maria Chen reported a Comprehensive loss on 2024-05-25 in Arizona. Vehicle type: SUV. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $8,455. Claim status: Pending.
+----------------------------------------
+
+Investigation note for CLM-1018 (Policy POL-2019). Loss type: Vandalism. Claimant Thomas Patel provided a statement describing a rear-end collision on 2024-06-01. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1019. Location: California. The insured claims a Theft event damaged their Coupe. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Open. Amount: $17,552.
+----------------------------------------
+
+Claim CLM-1020 review summary. Policy POL-2021. Claimant: Priya Anderson. The insured reported theft of personal items from the vehicle on 2024-08-07. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1021. Loss type Comprehensive in Texas. Insured Nina Williams described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: Possible staged accident indicators.
+----------------------------------------
+
+Claim file CLM-1022: Collision involving SUV owned by Thomas Brown. Date of loss: 2024-10-13. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Under Review.
+----------------------------------------
+
+Comprehensive claim CLM-1023. Hail damage reported in Texas on 2024-11-16. Roof and hood dents consistent with weather event. No SIU concerns. Claimant James Harris. Estimated payout $75,983. Status: Closed. Additional detail: Insured originally said they were traveling 35 mph, later said 20 mph. Witness statement about a rear-end collision contradicts the insured. Referred to SIU for inconsistent statements. Possible staged accident indicators reviewed.
+----------------------------------------
+
+Follow-up note on CLM-1024 / POL-2025. Adjuster interviewed claimant Michael Davis. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1025: Insured Omar Patel reported a Comprehensive loss on 2024-01-22 in California. Vehicle type: Motorcycle. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $8,012. Claim status: Pending.
+----------------------------------------
+
+Investigation note for CLM-1026 (Policy POL-2027). Loss type: Comprehensive. Claimant Kevin Williams provided a statement describing a rear-end collision on 2024-02-25. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1027. Location: Georgia. The insured claims a Flood event damaged their Coupe. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Pending. Amount: $81,999.
+----------------------------------------
+
+Claim CLM-1028 review summary. Policy POL-2029. Claimant: Nina Jackson. The insured reported theft of personal items from the vehicle on 2024-04-04. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: Yes.
+----------------------------------------
+
+SIU screening note for CLM-1029. Loss type Comprehensive in California. Insured Anita Perez described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1030: Collision involving SUV owned by Grace Garcia. Date of loss: 2024-06-10. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Closed.
+----------------------------------------
+
+Comprehensive claim CLM-1031. Hail damage reported in Nevada on 2024-07-13. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Nina Davis. Estimated payout $28,622. Status: Open.
+----------------------------------------
+
+Follow-up note on CLM-1032 / POL-2033. Adjuster interviewed claimant Brian White. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1033: Insured Raj Brown reported a Fire loss on 2024-09-19 in Washington. Vehicle type: Sedan. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $40,624. Claim status: Closed.
+----------------------------------------
+
+Investigation note for CLM-1034 (Policy POL-2035). Loss type: Collision. Claimant Lisa Garcia provided a statement describing a rear-end collision on 2024-10-22. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1035. Location: Texas. The insured claims a Vandalism event damaged their SUV. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Open. Amount: $34,701.
+----------------------------------------
+
+Claim CLM-1036 review summary. Policy POL-2037. Claimant: Carlos Martinez. The insured reported theft of personal items from the vehicle on 2024-12-01. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1037. Loss type Comprehensive in Arizona. Insured Kevin Chen described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1038: Collision involving SUV owned by Robert Davis. Date of loss: 2024-02-07. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Pending.
+----------------------------------------
+
+Comprehensive claim CLM-1039. Hail damage reported in Arizona on 2024-03-10. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Sofia Garcia. Estimated payout $18,798. Status: Denied.
+----------------------------------------
+
+Follow-up note on CLM-1040 / POL-2001. Adjuster interviewed claimant Lisa Anderson. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1041: Insured Wei Brown reported a Vandalism loss on 2024-05-16 in Pennsylvania. Vehicle type: Pickup Truck. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $61,290. Claim status: Pending.
+----------------------------------------
+
+Investigation note for CLM-1042 (Policy POL-2003). Loss type: Collision. Claimant Fatima Garcia provided a statement describing a rear-end collision on 2024-06-19. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: Yes. Reason: Prior claims history with similar loss pattern. SIU referral reason documented as inconsistent statements between insured and witness. Damage pattern inconsistent with reported impact. Investigation outcome pending SIU review.
+----------------------------------------
+
+Field adjuster report - CLM-1043. Location: North Carolina. The insured claims a Flood event damaged their Sedan. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Denied. Amount: $78,212.
+----------------------------------------
+
+Claim CLM-1044 review summary. Policy POL-2005. Claimant: Thomas Patel. The insured reported theft of personal items from the vehicle on 2024-08-25. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1045. Loss type Comprehensive in California. Insured Anita Davis described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1046: Collision involving Motorcycle owned by Daniel White. Date of loss: 2024-10-04. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Open.
+----------------------------------------
+
+Comprehensive claim CLM-1047. Hail damage reported in Tennessee on 2024-11-07. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Daniel Taylor. Estimated payout $22,756. Status: Under Review.
+----------------------------------------
+
+Follow-up note on CLM-1048 / POL-2009. Adjuster interviewed claimant Michael Jackson. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1049: Insured Robert Perez reported a Collision loss on 2024-01-13 in Arizona. Vehicle type: SUV. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $53,102. Claim status: Open.
+----------------------------------------
+
+Investigation note for CLM-1050 (Policy POL-2011). Loss type: Flood. Claimant Robert Davis provided a statement describing a rear-end collision on 2024-02-16. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1051. Location: Arizona. The insured claims a Theft event damaged their Motorcycle. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Closed. Amount: $71,001.
+----------------------------------------
+
+Claim CLM-1052 review summary. Policy POL-2013. Claimant: Kevin Anderson. The insured reported theft of personal items from the vehicle on 2024-04-22. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1053. Loss type Collision in Illinois. Insured Priya Perez described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1054: Collision involving Coupe owned by Fatima Brown. Date of loss: 2024-06-01. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Under Review.
+----------------------------------------
+
+Comprehensive claim CLM-1055. Hail damage reported in Texas on 2024-07-04. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Maria Patel. Estimated payout $75,539. Status: Closed.
+----------------------------------------
+
+Follow-up note on CLM-1056 / POL-2017. Adjuster interviewed claimant Grace Martinez. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: Yes.
+----------------------------------------
+
+Claim CLM-1057: Insured Kevin Smith reported a Vandalism loss on 2024-09-10 in North Carolina. Vehicle type: Sedan. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $60,217. Claim status: Denied.
+----------------------------------------
+
+Investigation note for CLM-1058 (Policy POL-2019). Loss type: Collision. Claimant John White provided a statement describing a rear-end collision on 2024-10-13. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1059. Location: Florida. The insured claims a Comprehensive event damaged their Pickup Truck. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Denied. Amount: $4,322.
+----------------------------------------
+
+Claim CLM-1060 review summary. Policy POL-2021. Claimant: Kevin Moore. The insured reported theft of personal items from the vehicle on 2024-12-19. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1061. Loss type Collision in Texas. Insured Carlos Moore described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1062: Collision involving Pickup Truck owned by Daniel Davis. Date of loss: 2024-02-25. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Under Review.
+----------------------------------------
+
+Comprehensive claim CLM-1063. Hail damage reported in Georgia on 2024-03-01. Roof and hood dents consistent with weather event. No SIU concerns. Claimant David Brown. Estimated payout $74,236. Status: Open.
+----------------------------------------
+
+Follow-up note on CLM-1064 / POL-2025. Adjuster interviewed claimant David Davis. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1065: Insured Robert Martinez reported a Vandalism loss on 2024-05-07 in Georgia. Vehicle type: Pickup Truck. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $28,440. Claim status: Closed.
+----------------------------------------
+
+Investigation note for CLM-1066 (Policy POL-2027). Loss type: Vandalism. Claimant Kevin Taylor provided a statement describing a rear-end collision on 2024-06-10. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1067. Location: Florida. The insured claims a Collision event damaged their Sedan. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Under Review. Amount: $49,686. Notes mention staged accident concern and excessive damages relative to low-speed event. Fraud indicators flagged for further review.
+----------------------------------------
+
+Claim CLM-1068 review summary. Policy POL-2029. Claimant: Fatima Moore. The insured reported theft of personal items from the vehicle on 2024-08-16. Police report filed. There is mention of a prior claim with similar circumstances. Investigation continues. SIU referred: No.
+----------------------------------------
+
+SIU screening note for CLM-1069. Loss type Flood in Georgia. Insured Aisha Martinez described a staged-accident-like sequence involving a sudden stop on a highway entrance ramp. Witness statement about a rear-end collision differs from the insured narrative. Inconsistent statements flagged. Excessive damages claimed relative to low-speed impact. Referral reason: N/A.
+----------------------------------------
+
+Claim file CLM-1070: Collision involving Sedan owned by John Moore. Date of loss: 2024-10-22. The insured said another driver changed lanes abruptly. Independent witness supports the insured's account. Deductible applied. Settlement under review. Status: Denied.
+----------------------------------------
+
+Comprehensive claim CLM-1071. Hail damage reported in Michigan on 2024-11-25. Roof and hood dents consistent with weather event. No SIU concerns. Claimant Priya Anderson. Estimated payout $27,232. Status: Under Review.
+----------------------------------------
+
+Follow-up note on CLM-1072 / POL-2033. Adjuster interviewed claimant Michael Perez. Statement regarding accident sequence changed between first and second interview. Suspicious loss timing noted — policy bound only 18 days before loss. Potential fraud indicators documented. SIU: No.
+----------------------------------------
+
+Claim CLM-1073: Insured Daniel Williams reported a Comprehensive loss on 2024-01-04 in Pennsylvania. Vehicle type: Motorcycle. Adjuster notes: The insured stated the accident occurred at an intersection when another vehicle failed to yield. Damage observed on the front bumper and left headlight. Paid amount recorded as $79,979. Claim status: Denied.
+----------------------------------------
+
+Investigation note for CLM-1074 (Policy POL-2035). Loss type: Flood. Claimant James Anderson provided a statement describing a rear-end collision on 2024-02-07. Witness statement indicates the insured may have braked suddenly without cause. Adjuster observed moderate rear bumper damage. SIU referral: No. Reason: N/A.
+----------------------------------------
+
+Field adjuster report - CLM-1075. Location: Washington. The insured claims a Comprehensive event damaged their Van. Photos show scrape marks along the driver side. Insured statement is generally consistent with physical evidence. No obvious fraud indicators noted. Status: Denied. Amount: $49,635.
+----------------------------------------
