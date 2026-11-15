@@ -110,7 +110,7 @@ def parse_query(
         break
   # Look for a US state mentioned in the question.
   for state in US_STATES:
-    if re.search(rf"\b{re.escape(state.lower())}|b", lower):
+    if re.search(rf"\b{re.escape(state.lower())}\b", lower):
       filters.state = state
       break
   # Detect whether the query implies an SIU referral.
@@ -131,7 +131,7 @@ def parse_query(
 
   #extract a maximum paid amount form phrases like "below $10,000"
   amount_below = re.search(
-    r"(?:below|less than)\s\$?\s*([\d,]+(?:\.\d+)?)",
+    r"(?:below|less than)\s*\$?\s*([\d,]+(?:\.\d+)?)",
     lower,
   )
 
@@ -185,7 +185,8 @@ def exact_match(
 
     # some documents may contain multiple claim ids.
     extra_claims = {
-      str(c).upper() for c in meta.get("claim_ids", []) or []
+      str(c).upper() 
+      for c in meta.get("claim_ids", []) or []
     }
 
     # Check both metadata and the actual document text for claim ids.
@@ -250,7 +251,7 @@ def metadata_filter(
 
   # Claim records contain the structured fields used for filtering.
   claim_rows = [d for d in documents if d.get("doc_type") == "claim_record"]
-  matched__claims_ids: set[str] = set()
+  matched_claim_ids: set[str] = set()
 
   for doc in claim_rows:
     meta = _meta(doc)
@@ -282,10 +283,10 @@ def metadata_filter(
     if filters.max_paid_amount is not None and paid > filters.max_paid_amount:
       continue
     # This claim passed every requested filter.
-    matched__claims_ids.add(str(meta.get("claim_id", "").upper()))
+    matched_claim_ids.add(str(meta.get("claim_id", "").upper()))
 
   # If there are no field based filters, leave the documents unchanged.
-  if not matched__claims_ids and not(
+  if not matched_claim_ids and not(
     filters.claim_status
     or filters.loss_type
     or filters.state
@@ -302,11 +303,12 @@ def metadata_filter(
     claim_id = str(meta.get("claim_id","")).upper()
 
     # Some documents, such as PDF pages, can reference multiple claims.
-    extra ={ str(c).upper() for c in meta.get("claims_ids", []) or []}
+    extra ={ str(c).upper() 
+            for c in meta.get("claim_ids", []) or []}
 
     if doc.get("doc_type") == "claim_record":
       # keep only claims records that passed the filters.
-      if claim_id in matched__claims_ids:
+      if claim_id in matched_claim_ids:
         filtered.append(doc)
         continue
 
@@ -314,10 +316,10 @@ def metadata_filter(
       # General guidelines and policy documents can provide supporting context
       # even when they have no Claim ID.
       if (
-        matched__claims_ids
+        matched_claim_ids
         and (
-          claim_id in matched__claims_ids
-          or (extra & matched__claims_ids)
+          claim_id in matched_claim_ids
+          or (extra & matched_claim_ids)
           or (doc.get("doc_type") in ("text", "docx_section") and not claim_id)
         )
       ):
@@ -460,7 +462,7 @@ def fuse_results(
 
       # Record every retrieval method that found this document.
       for method in item.methods:
-        if method in existing.methods:
+        if method not in existing.methods:
           existing.methods.append(method)
 
       if item.bm25_score is not None:
@@ -556,7 +558,7 @@ def retrieve(
 
   # Run the different vectorless retrieval strategies.
   exact = exact_match(documents, filters)
-  structured = _has_structured_filters(filters)
+  structured = has_structured_filters(filters)
   filtered = metadata_filter(documents, filters)
 
   # When structured filters are available search only the filtered corpus.
