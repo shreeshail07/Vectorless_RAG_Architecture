@@ -557,28 +557,48 @@ def retrieve(
   filters = parse_query(query, sidebar_filters)
 
   # Run the different vectorless retrieval strategies.
-  exact = exact_match(documents, filters)
   structured = has_structured_filters(filters)
   filtered = metadata_filter(documents, filters)
 
+  # Exact matches must respect structured metadata filters.
+  exact_candidates = exact_match(documents, filters)
+
+  if structured:
+      allowed_document_ids = {id(doc) for doc in filtered}
+
+      exact = [
+          item
+          for item in exact_candidates
+          if id(item.document) in allowed_document_ids
+      ]
+  else:
+      exact = exact_candidates
+  
+
   # When structured filters are available search only the filtered corpus.
   # Otherwise search the complete BM25 index.
-  use_filtered_corpus = structured and bool(filtered)
+  # When structured filters are requested, never fall back
+  # to the full corpus if no documents match.
 
-  if use_filtered_corpus:
-    bm25_hits = BM25Index(filtered).search(
-      query, top_k=max(top_k * 3, 15)
-    )
+  if structured:
     filtered_count = len(filtered)
+    if not filtered:
+        bm25_hits = []
+    else:
+        bm25_hits = BM25Index(filtered).search(
+            query,
+            top_k=max(top_k * 3, 15),
+        )
   else:
+    
+    
     bm25_hits = get_bm25_index(data_dir_str).search(
-      query, top_k=max(top_k * 3, 15)
-
+        query,
+        top_k=max(top_k * 3, 15),
     )
-    # Only report filtered documents when structured filtered was requested.
-    filtered_count = len(filtered) if structured else 0
-    filtered = filtered if structured else []
 
+    filtered_count = 0
+    filtered = []
   # Combines all retrieval results into one ranked list.
   final = fuse_results(
     exact,

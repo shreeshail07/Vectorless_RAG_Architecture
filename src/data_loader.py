@@ -148,7 +148,7 @@ def _chunk_claim_notes(raw: str, source: str) -> list[DocumentDict]:
   """
 
   # claim notes are separated by a line containing 10+ hyphens.
-  parts = [p.strip() for p in re.split(r"\n-{10,}\n", raw) if p.strip]
+  parts = [p.strip() for p in re.split(r"\n-{10,}\n", raw) if p.strip()]
 
   documents: list[DocumentDict] =[]
 
@@ -156,7 +156,7 @@ def _chunk_claim_notes(raw: str, source: str) -> list[DocumentDict]:
     # Remove any synthetic/header text before the actual claim content.
     if part.startswith("SYNTHETIC") or part.startswith("="):
       match_inline = re.search(
-        r"(Claim\s+CLM-\d{4}|CLM-d{4})",
+        r"(Claim\s+CLM-\d{4}|CLM-\d{4})",
         part,
         flags=re.IGNORECASE,
       )
@@ -214,7 +214,7 @@ def load_pdf(path: Path) -> list[DocumentDict]:
       continue
 
     # Find all Claim IDs mentioned on this page.
-    claim_ids = re.findall(r"CLM-4\d{4}", text, flags=re.IGNORECASE)
+    claim_ids = re.findall(r"\bCLM-\d{4}\b", text, flags=re.IGNORECASE)
 
     documents.append(
       {
@@ -288,66 +288,79 @@ def load_docx(path: Path) -> list[DocumentDict]:
   return documents
 
 
+def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
+    """
+    Load all supported files from the data directory.
 
-def load_all_documents(data_dir: Path |None = None) -> list[DocumentDict]:
-  """
-  Load all supported files from the data directory.
-  
-  The function selects the correct loader_based on each fil's extension
-  and combines all loaded documents into one list.
-  
-  Supported formats:
-    CSV, TXT, PDF, DOCX
-  """
+    A failure in one file should not prevent other supported files
+    from being processed.
+    """
 
-  data_dir = data_dir or default_data_dir()
+    data_dir = data_dir or default_data_dir()
 
-  # Make sure the data directory exists before loading files.
+    if not data_dir.exists():
+        raise FileNotFoundError(
+            f"Data directory not found: {data_dir}"
+        )
 
-  if not data_dir.exists():
-    raise FileNotFoundError(f"Data directory not found: {data_dir}")
+    if not data_dir.is_dir():
+        raise NotADirectoryError(
+            f"Expected a directory: {data_dir}"
+        )
 
-  documents: list[DocumentDict] =[]
+    documents: list[DocumentDict] = []
 
-  # Map each file type to its corresponding loader function.
+    loaders = {
+        ".csv": load_csv_claims,
+        ".txt": load_text,
+        ".pdf": load_pdf,
+        ".docx": load_docx,
+    }
 
-  loaders = {
-    ".csv": load_csv_claims,
-    ".txt": load_text,
-    ".pdf": load_pdf,
-    ".docx": load_docx,
-  }
+    failed_files: list[str] = []
 
-  for path in sorted(data_dir.iterdir()):
-    # Ignore directories and process only files.
-    if not path.is_file():
-      continue
+    for path in sorted(data_dir.iterdir()):
 
-    # Select the appropriate loader based on the file extension.
-    loader = loaders.get(path.suffix.lower())
+        if not path.is_file():
+            continue
 
-    if loader is None:
-      logger.warning("Skipping unsupported file: %s", path.name)
-      continue
-    try:
-      loaded = loader(path)
-      documents.extend(loaded)
+        loader = loaders.get(path.suffix.lower())
 
-      logger.info(
-        "Loaded %s documents from %s",
-        len(loaded),
-        path.name,
-      )
+        if loader is None:
+            logger.warning("Skipping unsupported file: %s", path.name)
+            continue
 
-    except Exception as exc:
-      # Stop the application if a supported file cannot be loaded.
-      logger.error("Failed to load %s: %s", path.name, exc)
-      raise
+        try:
+            loaded = loader(path)
+            documents.extend(loaded)
 
-  # An empty document collection means the application has nothing to search.
-  if not documents:
-    raise ValueError(f"No documents loaded from {data_dir}")
-  return documents
+            logger.info(
+                "Loaded %s documents from %s",
+                len(loaded),
+                path.name,
+            )
+
+        except Exception:
+            failed_files.append(path.name)
+            logger.exception("Failed to load %s", path.name)
+            continue
+
+    if failed_files:
+        logger.warning(
+            "Ingestion completed with %s failed files: %s",
+            len(failed_files),
+            ", ".join(failed_files),
+        )
+
+    if not documents:
+        raise ValueError(
+            f"No documents loaded from {data_dir}. "
+            f"Failed files: {failed_files}"
+        )
+
+    return documents
+
+
 
 @lru_cache(maxsize=1)
 def get_cached_documents(data_dir_str: str | None = None) -> tuple[DocumentDict, ...]:
@@ -364,6 +377,14 @@ def get_cached_documents(data_dir_str: str | None = None) -> tuple[DocumentDict,
   # Load the documents  once and store the in an immutable tuple.
   return tuple(load_all_documents(data_dir))
 
+def refresh_document_cache() -> None:
+    """
+    Clear cached documents so the next request reloads files from disk.
+    """
+    get_cached_documents.cache_clear()
+
+    logger.info("Document cache cleared successfully")
+    
 
   
 

@@ -1,7 +1,40 @@
+
 [project]
-name = "vectorless-rag-architecture"
-version = "0.1.0"
-description = "Add your description here"
+name = "insurance-claims-intelligence"
+version = "1.0.0"
+description = "Enterprise Insurance Claims Intelligence Platform using Vectorless RAG"
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = []
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    "streamlit",
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "pydantic-settings",
+    "python-dotenv",
+    "openai",
+    "pandas",
+    "rank-bm25",
+    "pypdf",
+    "python-docx",
+    "reportlab",
+    "httpx",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
