@@ -115,46 +115,59 @@ class RateLimiter:
       self._timestamps.popleft()
     return max(0, self.max_calls - len(self._timestamps))
 
+
 def retry_with_backoff(
     fn: Callable[[], T],
-          *,
-          max_retries: int = 3,
-          base_delay: float = 1.0,
-          exceptions: tuple[type[BaseException], ...] = (Exception,),
+    *,
+    max_retries: int = 3,
+    base_delay: float = 1.0,
+    exceptions: tuple[type[BaseException], ...] = (Exception,),
 ) -> T:
-  """
-  Execute a function and retry it if it fails.
-  The delay increases exponentially after each failure:
-  1s > 2s > 3s > ...
-  Example:
-   if an api call fails temporarily, the function waits 
-   before trying again instead of failing immediately.
-   """
+    """
+    Execute a function and retry it when configured exceptions occur.
 
-  last_error: BaseException | None = None
+    max_retries represents the total number of attempts,
+    including the initial call.
 
-  for attempt in range(max_retries):
-    try:
-      return fn()
-    except exceptions as exc:
-      # Stop retrying after the final attempt.
-      if attempt == max_retries - 1:
-        break
-      # Increase the waiting time after each failed attempt.
-      delay = base_delay * (2**attempt)
+    Delay increases exponentially:
+    1s -> 2s -> 4s -> 8s.
 
-      logger.warning(
-        "Retry %s/%s after error: %s (sleep %.1fs)",
-        attempt + 1,
-        max_retries,
-        exc,
-        delay,
-      )
+    Only the specified exception types are retried.
+    """
 
-      time.sleep(delay)
-  # All attempts failed, so return the original error to the caller.
-  assert last_error is not None
-  raise last_error
+    if max_retries < 1:
+        raise ValueError("max_retries must be at least 1")
+
+    if base_delay < 0:
+        raise ValueError("base_delay cannot be negative")
+
+    for attempt in range(max_retries):
+        try:
+            return fn()
+
+        except exceptions as exc:
+
+            # Final attempt: propagate the original exception.
+            if attempt == max_retries - 1:
+                logger.error(
+                    "All %s attempts failed: %s",
+                    max_retries,
+                    exc,
+                )
+                raise
+
+            delay = base_delay * (2 ** attempt)
+
+            logger.warning(
+                "Retry %s/%s after error: %s (sleep %.1fs)",
+                attempt + 1,
+                max_retries,
+                exc,
+                delay,
+            )
+
+            time.sleep(delay)
+
 
 def truncate_context(texts: list[str], max_chars: int) -> list[str]:
   """
