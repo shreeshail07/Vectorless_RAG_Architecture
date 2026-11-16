@@ -12,6 +12,7 @@ each document is a dict:
 from __future__ import annotations
 
 import re
+import time
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -288,12 +289,20 @@ def load_docx(path: Path) -> list[DocumentDict]:
   return documents
 
 
+
 def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
     """
     Load all supported files from the data directory.
 
     A failure in one file should not prevent other supported files
     from being processed.
+
+    Logs ingestion metrics:
+    - Total supported files
+    - Successfully processed files
+    - Failed files
+    - Total extracted documents
+    - Total processing duration
     """
 
     data_dir = data_dir or default_data_dir()
@@ -308,6 +317,8 @@ def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
             f"Expected a directory: {data_dir}"
         )
 
+    start_time = time.perf_counter()
+
     documents: list[DocumentDict] = []
 
     loaders = {
@@ -317,6 +328,8 @@ def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
         ".docx": load_docx,
     }
 
+    total_files = 0
+    successful_files = 0
     failed_files: list[str] = []
 
     for path in sorted(data_dir.iterdir()):
@@ -330,9 +343,12 @@ def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
             logger.warning("Skipping unsupported file: %s", path.name)
             continue
 
+        total_files += 1
+
         try:
             loaded = loader(path)
             documents.extend(loaded)
+            successful_files += 1
 
             logger.info(
                 "Loaded %s documents from %s",
@@ -344,6 +360,22 @@ def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
             failed_files.append(path.name)
             logger.exception("Failed to load %s", path.name)
             continue
+
+    duration_seconds = time.perf_counter() - start_time
+
+    logger.info(
+        "Ingestion summary | "
+        "total_files=%s | "
+        "successful_files=%s | "
+        "failed_files=%s | "
+        "total_documents=%s | "
+        "duration_seconds=%.3f",
+        total_files,
+        successful_files,
+        len(failed_files),
+        len(documents),
+        duration_seconds,
+    )
 
     if failed_files:
         logger.warning(
@@ -359,8 +391,6 @@ def load_all_documents(data_dir: Path | None = None) -> list[DocumentDict]:
         )
 
     return documents
-
-
 
 @lru_cache(maxsize=1)
 def get_cached_documents(data_dir_str: str | None = None) -> tuple[DocumentDict, ...]:
