@@ -13,7 +13,11 @@ from typing import Any
 
 from rank_bm25 import BM25Okapi
 
-from src.data_loader import DocumentDict, get_cached_documents
+from src.data_loader import (
+    DocumentDict,
+    get_cached_documents,
+    refresh_document_cache,
+)
 from src.utils import (
   extract_claim_ids,
   extract_policy_ids,
@@ -526,6 +530,18 @@ def get_bm25_index(data_dir_str: str |None =None) -> BM25Index:
 
   #build the searchable BM25 index.
   return BM25Index(docs)
+
+def refresh_retrieval_caches() -> None:
+    """
+    Clear document and BM25 caches together.
+    """
+
+    refresh_document_cache()
+    get_bm25_index.cache_clear()
+
+    logger.info(
+        "Document and BM25 caches refreshed successfully"
+    )
 
 def retrieve(
     query: str,
