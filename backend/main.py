@@ -1,7 +1,7 @@
-
 from fastapi import FastAPI
 
 from backend.api.health import router as health_router
+from backend.api.retrieval import router as retrieval_router
 
 app = FastAPI(
     title="Insurance Claims Intelligence API",
@@ -11,6 +11,7 @@ app = FastAPI(
 
 # Register API routers
 app.include_router(health_router)
+app.include_router(retrieval_router)
 
 
 @app.get("/")
